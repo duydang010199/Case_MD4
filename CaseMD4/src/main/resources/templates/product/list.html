@@ -276,7 +276,7 @@
                 <td class="text-right">
                             ${new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(item.price)}
                 </td>
-                <td>${item.quantity}</td>
+                <td class="text-center">${item.quantity}</td>
                 <td>${item.description}</td>
                 <td class="text-center">
                     <button data-id="${item.id}"
@@ -430,25 +430,25 @@
         messages: {
             titleUp: {
                 required: "Vui lòng nhập tên sản phẩm.",
-                minlength: "Tên sản phẩm có độ dài tối thiểu là 5 ký tự.",
-                maxlength: "Tên sản phẩm có độ dài tối đa là 100 ký tự."
+                minlength: "Tên sản phẩm có độ dài tối thiểu là ${0} ký tự.",
+                maxlength: "Tên sản phẩm có độ dài tối đa là ${0} ký tự."
             },
             priceUp: {
                 required: "Vui lòng nhập giá.",
-                min: "Giá sản phẩm tối thiểu là 100.000 $.",
-                max: "Giá sản phẩm tối đa là 999.999.999 $.",
+                min: "Giá sản phẩm tối thiểu là ${0} $.",
+                max: "Giá sản phẩm tối đa là ${0} $.",
                 number: "Giá sản phẩm phải là số."
             },
             quantityUp: {
                 required: "Vui lòng nhập số lượng.",
-                min: "Số lượng tối thiểu là 1 sản phẩm.",
-                max: "Số lượng tối thiểu là 999.999 sản phẩm.",
+                min: "Số lượng tối thiểu là ${0} sản phẩm.",
+                max: "Số lượng tối thiểu là ${0} sản phẩm.",
                 number: "Số lượng phải là số."
             },
             descriptionUp: {
                 required: "Vui lòng nhập mô tả.",
-                minlength: "Mô tả có độ dài tối thiểu là 5 ký tự.",
-                maxlength: "Mô tả có độ dài tối đa là 200 ký tự."
+                minlength: "Mô tả có độ dài tối thiểu là ${0} ký tự.",
+                maxlength: "Mô tả có độ dài tối đa là ${0} ký tự."
             }
         },
         errorLabelContainer: "#modalUpdateProduct .modal-body .modal-alert-danger",
@@ -494,7 +494,7 @@
             .done((data) => {
                 product = data;
                 productAvatar = product.productAvatar;
-                let str =renderProducts(product, productAvatar);
+                let str = renderProducts(product, productAvatar);
                 let updateRow = $("#tr_" + product.id);
                 console.log(str)
                 updateRow.replaceWith(str);
