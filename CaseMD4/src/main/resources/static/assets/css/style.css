@@ -1,0 +1,33 @@
+.color-background {
+    background-color: white;
+    background-image: none;
+}
+
+.hide {
+    display: none;
+}
+
+.modal-alert-danger {
+    padding: 10px 35px;
+    margin-bottom: 15px;
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    font-size: 15px;
+}
+
+.modal-alert-danger label {
+    display: list-item;
+}
+
+.error {
+    color: #842029;
+    font-size: inherit;
+    position: relative;
+    line-height: 1;
+    width: 12.5rem;
+}
+
+.modal-dialog-scrollable .modal-content {
+    overflow: unset;
+}
